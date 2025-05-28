@@ -14,6 +14,24 @@ public class Realistic {
      * 
      * @return int with the smallest value in array arr
      */
+
+    public static void add(int value){
+        // Initialize new Array "NewTemp" with a length one greater than the original.
+        int[] NewTemp = new int[arr.length + 1];
+        // Initialize a for loop that assigns each value
+        // For every value except the last, assign the "added value" to the last position in the array
+        for (int i = 0; i < arr.length + 1; i++){
+            // copies all values from arr to NewTemp
+            if (i < arr.length) {
+                NewTemp[i] = arr[i];
+            } 
+            //adds value as a part of the last iteration
+            else {
+                NewTemp[i] = value;
+            }
+        }
+    }
+
     public static int getSmallest() {
         // Assume smallest is first element
         int smallest_index = 0;
