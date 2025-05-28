@@ -25,12 +25,13 @@ public class Realistic {
             if (i < arr.length) {
                 NewTemp[i] = arr[i];
             } 
-            //adds value as a part of the last iteration
+            // Adds value as a part of the last iteration
             else {
                 NewTemp[i] = value;
-            }
-        }
-    }
+            } // end if statement
+        } // end for loop
+        arr = NewTemp; // Adds the new value to the array 
+    } // end method
 
     public static int getSmallest() {
         // Assume smallest is first element
@@ -86,5 +87,9 @@ public class Realistic {
         System.out.printf("\nSmallest element found: %d", getSmallest());
         System.out.printf("\nArray after removal of smallest element: %s\n\n",
                 Arrays.toString(arr));
+        add(16);
+        System.out.printf("\nArray after addition of the value 16 (test): %s",
+                Arrays.toString(arr));
+
     } // method main
 } // class Realistic
